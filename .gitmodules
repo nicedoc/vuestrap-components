@@ -1,0 +1,6 @@
+[submodule "modules/vuestrap"]
+	path = modules/vuestrap
+	url = git@github.com:nicedoc/vuestrap.git
+[submodule "modules/vuestrap-loader"]
+	path = modules/vuestrap-loader
+	url = git@github.com:nicedoc/vuestrap-loader.git
