@@ -20,6 +20,9 @@
 </template>
 
 <script>
+
+import 'vuestrap/core'
+
 export default {
   name: 'app',
   data () {
