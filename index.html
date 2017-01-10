@@ -5,7 +5,25 @@
     <title>vuestrap-components</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" v-cloak>
+
+      <!-- offcanvas wrapper -->
+      <vs-offcanvas-wrapper id="main" animation="ease" align="left">
+
+        <vs-offcanvas-drawer>
+          <h1>drawer</h1>
+          <!-- mobile drawer with navbar -->
+          <!--<vs-docs-drawer :routes="routes" :pkg="pkg"></vs-docs-drawer>-->
+        </vs-offcanvas-drawer>
+
+        <!--&lt;!&ndash; desktop content &ndash;&gt;-->
+        <!--<div id="docs-pages">-->
+          <!--<h1>page</h1>-->
+          <!--&lt;!&ndash;<vs-docs-pages :routes="routes" :page-title.sync="pageTitle" :pkg="pkg"></vs-docs-pages>&ndash;&gt;-->
+        <!--</div>-->
+
+      </vs-offcanvas-wrapper>
+    </div>
     <script src="/dist/build.js"></script>
   </body>
 </html>
