@@ -40,6 +40,17 @@ module.exports = {
                 test: /\.html$/,
                 exclude: /(snippet.html)/,
                 loader: 'html-loader'
+            }, {
+                test: /snippet.html$/,
+                use: [
+                    {loader: 'html-loader'},
+                    {
+                        loader: 'highlightjs-loader',
+                        options: {
+                            lang: "html"
+                        }
+                    }
+                ]
             },
             {
                 test: /\.scss$/,
@@ -65,10 +76,10 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js'
         },
-        modules: ['modules', 'node_modules']
+        modules: [".", 'modules', 'node_modules']
     },
     resolveLoader: {
-        modules: ['modules', 'node_modules']
+        modules: [".", 'modules', 'node_modules']
     },
     devServer: {
         historyApiFallback: true,

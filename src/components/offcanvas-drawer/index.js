@@ -31,6 +31,7 @@ export const offcanvasWrapper = {
     methods: {
         toggle() {
             this.show = !this.show
+
             if ("$vuestrap" in this) {
                 if (this.show) {
                     this.$vuestrap.$emit('shown::offcanvas-drawer', this.id)

@@ -2,34 +2,31 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import {offcanvasWrapper as vsOffcanvasWrapper, offcanvasDrawer as vsOffcanvasDrawer} from './components/offcanvas-drawer'
+import vsDocsDrawer from './components/docs-drawer'
+import vsDocsPages from './components/docs-pages'
 
 // import package.json meta data
 import pkg from '../package.json'
 
+import 'vuestrap/core'
+// import demo pages compatibile with docs component
+import docsRoutes from './docs'
+
+// import utils
+import {getRoutes} from './utils'
+
+// get list of the route objects
+const routes = getRoutes(docsRoutes)
+
 Vue.use(VueRouter)
 
-// 1. 定义（路由）组件。
-// 可以从其他文件 import 进来
-const Foo = {template: '<div>foo</div>'}
-const Bar = {template: '<div>bar</div>'}
-
-// 2. 定义路由
-// 每个路由应该映射一个组件。 其中"component" 可以是
-// 通过 Vue.extend() 创建的组件构造器，
-// 或者，只是一个组件配置对象。
-// 我们晚点再讨论嵌套路由。
-const routes = [
-    {path: '/foo', component: Foo},
-    {path: '/bar', component: Bar}
-]
-
-// 3. 创建 router 实例，然后传 `routes` 配置
-// 你还可以传别的配置参数, 不过先这么简单着吧。
 const router = new VueRouter({
     routes // （缩写）相当于 routes: routes
 })
 
 Vue.prototype.$vuestrap = new Vue();
+
+import 'vuestrap/components';
 
 new Vue({
     el: '#app',
@@ -41,9 +38,11 @@ new Vue({
     },
     components : {
         vsOffcanvasWrapper,
-        vsOffcanvasDrawer
+        vsOffcanvasDrawer,
+        vsDocsDrawer,
+        vsDocsPages
     },
     mounted: function () {
-        this.$vuestrap.$emit('toggle::offcanvas-drawer', 'main')
+        // this.$vuestrap.$emit('toggle::offcanvas-drawer', 'main')
     }
 })
