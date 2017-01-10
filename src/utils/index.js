@@ -2,12 +2,6 @@
  * Routes helper
  */
 
-// import router
-import Director from 'director'
-
-// create director instance
-export const router = new Director.Router().configure({strict: false})
-
 // gets routes info from the nested array of pages
 export const getRoutes = (arr) => {
   let parentId = ''

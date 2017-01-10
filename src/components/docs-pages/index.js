@@ -5,9 +5,6 @@ import template from './docs-pages.html'
 // import external dependencies
 import docsSearch from '../search'
 
-// import utils
-import {router} from '../../utils'
-
 // export component object
 export default {
     template: template,
@@ -43,18 +40,18 @@ export default {
     },
     ready() {
         // set routes for each page
-        this.routes.forEach((route) => {
-            // Adhoc Routing
-            router.on(route.url, () => {
-                if (route.redirect) {
-                    // if route has redirect param, redirect to the spcified route
-                    router.setRoute(route.redirect)
-                }
-                this.changeRoute(route)
-            })
-        })
-
-        // init router
-        router.init('/')
+        // this.routes.forEach((route) => {
+        //     // Adhoc Routing
+        //     router.on(route.url, () => {
+        //         if (route.redirect) {
+        //             // if route has redirect param, redirect to the spcified route
+        //             router.setRoute(route.redirect)
+        //         }
+        //         this.changeRoute(route)
+        //     })
+        // })
+        //
+        // // init router
+        // router.init('/')
     }
 }
