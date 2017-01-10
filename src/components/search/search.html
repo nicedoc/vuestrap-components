@@ -4,12 +4,12 @@
     <input type="text" class="form-control" placeholder="Search..." v-model="search" autocomplete="off">
   </div>
   <!-- components -->
-  <a :href="'#' + item.url"
+  <router-link :to="item.path"
     v-bind:class="{
-      'list-group-item': true, 
+      'list-group-item': true,
       active: currentView && item.id === currentView,
-    }" 
+    }"
     v-for="item in list">
     {{item.title}}
-  </a>
+  </router-link>
 </div>
