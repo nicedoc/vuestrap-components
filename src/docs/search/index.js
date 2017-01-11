@@ -2,8 +2,8 @@ import snippet from './snippet.html'
 import template from './search.html'
 import meta from './search.json'
 import './search.scss'
-import demo from 'src/components/demo'
-import search from 'src/components/search'
+import demo from '../../components/vuestrap/demo'
+import search from '../../components/vuestrap/search'
 
 export default {
 	route: {

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import {offcanvasWrapper as vsOffcanvasWrapper, offcanvasDrawer as vsOffcanvasDrawer} from './components/offcanvas-drawer'
-import vsDocsDrawer from './components/docs-drawer'
-import vsDocsPages from './components/docs-pages'
+import {offcanvasWrapper as vsOffcanvasWrapper, offcanvasDrawer as vsOffcanvasDrawer} from './components/vuestrap/offcanvas-drawer'
+import vsDocsDrawer from './components/vuestrap/docs-drawer'
+import vsDocsPages from './components/vuestrap/docs-pages'
 
 // import package.json meta data
 import pkg from '../package.json'
