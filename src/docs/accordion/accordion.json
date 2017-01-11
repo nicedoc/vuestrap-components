@@ -1,0 +1,26 @@
+{
+	"name": "accordion",
+	"title": "Accordion",
+	"description": "Extend the default collapse behavior to create an accordion. It requires both <code>target</code> and <code>target-group</code> attributes for this to work.",
+	"dependencies": ["vuestrap/collapse","vuestrap/collapseToggle"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "id",
+			"type": "String",
+			"default": "",
+			"required": true,
+			"description": "An <code>id</code> attribute  needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target</code> attribute."
+		},
+		{
+			"name": "group",
+			"type": "String",
+			"default": "",
+			"required": true,
+			"description": "A <code>group</code> attribute needs to be set on <code>&lt;vs-collapse></code> tag and referenced in <code>&lt;vs-collapsetoggle></code> using <code>target-group</code> attribute."
+		}
+	]
+}

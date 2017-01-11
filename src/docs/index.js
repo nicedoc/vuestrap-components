@@ -4,11 +4,17 @@ import docsPages from './docs-pages'
 import demo from './demo'
 import search from './search'
 
+import accordion from './accordion'
+import collapse from './collapse'
+
 export default {
-	pages: [
-		introduction,
-		docsPages,
-		demo,
-		search,
-	]
+    pages: [
+        accordion,
+        collapse,
+
+        introduction,
+        docsPages,
+        demo,
+        search,
+    ]
 }

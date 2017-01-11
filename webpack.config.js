@@ -76,10 +76,10 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js'
         },
-        modules: [".", 'modules', 'node_modules']
+        modules: [__dirname, 'modules', 'node_modules']
     },
     resolveLoader: {
-        modules: [".", 'modules', 'node_modules']
+        modules: [__dirname, 'modules', 'node_modules']
     },
     devServer: {
         historyApiFallback: true,

@@ -1,22 +1,22 @@
 import snippet from './snippet.html'
 import template from './docs-pages.html'
 import meta from './docs-pages.json'
-import docsDemo from 'src/components/demo'
+import docsDemo from 'src/components/vuestrap/demo'
 
 export default {
-	route: {
+    route: {
         path: '/docs-pages',
-		name: 'docs-pages',
-		title: 'Docs Pages'
-	},
-	template: template,
-	data() {
-		return {
-			meta: meta,
-		  snippet: snippet,
-		}
-	},
-	components: {
-		docsDemo,
-	},
+        name: 'docs-pages',
+        title: 'Docs Pages'
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+        }
+    },
+    components: {
+        docsDemo,
+    },
 }

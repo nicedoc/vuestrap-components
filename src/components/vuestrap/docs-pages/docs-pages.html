@@ -1,28 +1,29 @@
 <div id="docs-pages">
     <!-- header -->
-    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
-        <div class="container">
-            <a class="navbar-brand text-center" href="#/">
-                <img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">
-            </a>
+    <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-light bg-faded">
+        <!--<div class="container">-->
+            <!--<a class="navbar-brand text-center" href="#/">-->
+                <!--<img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">-->
+            <!--</a>-->
             <a class="navbar-brand text-center hidden-sm-down" href="#/">
-                Documentation
+                <img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo"> Documentation
             </a>
-
-            <ul class="nav navbar-nav float-xs-right">
+            <div class="float-xs-right">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item hidden-sm-down">
                     <a href="#/" class="btn">Introduction</a>
                 </li>
-                <li class="nav-item hidden-sm-down pull-xs-right">
+                <li class="nav-item hidden-sm-down">
                     <a :href="pkg.homepage" class="btn btn-success" target="_blank">&#9733; Github</a>
                 </li>
                 <li class="nav-item hidden-md-up">
                     <a href="#" class="btn btn-success" target="_blank"
-                       v-on:click.stop.prevent="$root.$vuestrap.$emit('toggle::offcanvas-drawer', 'main')">ddd&#9776;</a>
+                       v-on:click.stop.prevent="$root.$vuestrap.$emit('toggle::offcanvas-drawer', 'main')">&#9776;</a>
                 </li>
             </ul>
+            </div>
 
-        </div><!-- /.container -->
+        <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
     </nav><!-- /.navbar -->
 
     <!-- content -->
