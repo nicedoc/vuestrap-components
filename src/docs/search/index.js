@@ -16,7 +16,10 @@ export default {
 		return {
 			meta: meta,
 		  snippet: snippet,
-		  list: [{id: 'component-a', title: 'Component A'}, {id: 'component-b', title: 'Component B'}, {id: 'other', title: 'Other'}],
+		  list: [
+              {id: 'component-a', name: 'component-a', path: '.', title: 'Component A'},
+              {id: 'component-b', name: 'component-a', path: '.', title: 'Component B'},
+              {id: 'other', name: 'component-a', path: '.', title: 'Other'}],
 		}
 	},
 	components: {
