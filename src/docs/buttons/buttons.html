@@ -1,0 +1,39 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>
+			size 
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	<div slot="markup">
+		<vs-btn :size="size" variant="primary">Primary</vs-btn>
+		<vs-btn :size="size" variant="secondary">Secondary</vs-btn>
+		<vs-btn :size="size" variant="success">Success</vs-btn>
+		<vs-btn :size="size" variant="info">Info</vs-btn>
+		<vs-btn :size="size" variant="warning">Warning</vs-btn>
+		<vs-btn :size="size" variant="danger">Danger</vs-btn>
+		<hr>
+		<vs-btn :size="size" variant="outline-primary">Primary</vs-btn>
+		<vs-btn :size="size" variant="outline-secondary">Secondary</vs-btn>
+		<vs-btn :size="size" variant="outline-success">Success</vs-btn>
+		<vs-btn :size="size" variant="outline-info">Info</vs-btn>
+		<vs-btn :size="size" variant="outline-warning">Warning</vs-btn>
+		<vs-btn :size="size" variant="outline-danger">Danger</vs-btn>
+		<hr>
+		<vs-btn :size="size" variant="link" link="#">Button Link</vs-btn>
+		<vs-btn :size="size" variant="primary" disabled>Disabled</vs-btn>
+		<hr>
+		<vs-btn :size="size" variant="primary" block>Block</vs-btn>
+	</div>
+	<!-- Html markup end-->
+
+</docs-demo>	

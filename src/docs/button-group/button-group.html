@@ -1,0 +1,18 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+		<label>vertical <input type="checkbox" v-model="vertical"></label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	<div slot="markup">
+			<vs-button-group :vertical="vertical">
+			  <vs-button>Left</vs-button>
+			  <vs-button>Middle</vs-button>
+			  <vs-button>Right</vs-button>
+			</vs-button-group>
+	</div>
+	<!-- Html markup end-->
+</docs-demo>	

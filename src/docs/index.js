@@ -9,11 +9,15 @@ import docsPages from './docs-pages'
 import demo from './demo'
 import search from './search'
 
-import accordion from './accordion'
-import alert from './alert'
-import badge from './badge'
-import breadcrumb from './breadcrumb'
-import collapse from './collapse'
+import accordion from 'src/docs/accordion'
+import alert from 'src/docs/alert'
+import badge from 'src/docs/badge'
+import breadcrumb from 'src/docs/breadcrumb'
+import buttons from 'src/docs/buttons'
+import buttonGroup from 'src/docs/button-group'
+import buttonCheckbox from 'src/docs/button-checkbox'
+import buttonRadio from 'src/docs/button-radio'
+import collapse from 'src/docs/collapse'
 
 export default {
     pages: [
@@ -21,6 +25,10 @@ export default {
         alert,
         badge,
         breadcrumb,
+        buttons,
+        buttonCheckbox,
+        buttonRadio,
+        buttonGroup,
         collapse,
 
         introduction,

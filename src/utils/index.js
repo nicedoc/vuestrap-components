@@ -83,8 +83,5 @@ export const sizes = [
     }, {
         text: 'lg',
         value: 'lg'
-    }, {
-        text: 'xl',
-        value: 'xl'
     }
 ]

@@ -1,0 +1,47 @@
+{
+	"name": "button-checkbox",
+	"title": "Button Checkbox",
+	"description": "Allows to elect one or more items in the nested group of buttons.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "model",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "An array of <code>String</code> or <code>Object</code> values, (see <code>return-object</code> attribute)."
+		},
+		{
+			"name": "list",
+			"type": "Array",
+			"default": "[]",
+			"required": true,
+			"description": "A list of checkbox items."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		},
+		{
+			"name": "return-object",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "If set to true, a full object will be returned in the model. By default only <code>value</code> is returned."
+		}
+	]
+}

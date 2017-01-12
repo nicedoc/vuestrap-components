@@ -1,0 +1,37 @@
+<docs-demo :meta="meta" :snippet="snippet">
+
+	<!-- Html controls start-->
+	<div slot="controls">
+			<label>
+				size
+				<select v-model="size">
+					<option v-for="option in sizes" v-bind:value="option.value">
+				    {{ option.text }}
+				  </option>
+				</select>
+			</label>
+
+			<label>
+				variant
+				<select v-model="variant">
+					<option v-for="option in variants" v-bind:value="option.value">
+				    {{ option.text }}
+				  </option>
+				</select>
+			</label>
+	</div>
+	<!-- Html controls end-->
+
+	<!-- Html markup start-->
+	<div slot="markup">
+		<vs-button-radio
+			:model.sync="model"
+	    :list="list"
+	    :size="size"
+	    :variant="variant"
+	    return-object>
+		</vs-button-radio>
+	</div>
+	<!-- Html markup end-->
+	
+</docs-demo>	
