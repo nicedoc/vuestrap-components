@@ -1,0 +1,41 @@
+{
+	"name": "list-group",
+	"title": "List Group",
+	"description": "List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.",
+	"dependencies": ["vuestrap/labels"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "state",
+			"type": "String",
+			"default": "default",
+			"values": ["default","success","info","warning","danger"],
+			"required": false,
+			"description": "A color context on the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "active",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "An active state on the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "A disabled state on the individual <code>&lt;vs-list-group-item></code>."
+		},
+		{
+			"name": "flush",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "Removes borders if set to true."
+		}
+	]
+}

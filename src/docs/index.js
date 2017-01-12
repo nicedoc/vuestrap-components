@@ -49,6 +49,9 @@ import formInput from 'src/docs/form-input'
 import formRadio from 'src/docs/form-radio'
 import formSelect from 'src/docs/form-select'
 import formTextarea from 'src/docs/form-textarea'
+import images from 'src/docs/images'
+import listGroup from 'src/docs/list-group'
+
 
 export default {
     pages: [
@@ -69,6 +72,8 @@ export default {
         formRadio,
         formSelect,
         formTextarea,
+        images,
+        listGroup,
 
         introduction,
         docsPages,

@@ -1,0 +1,35 @@
+<docs-demo :meta="meta" :snippet="snippet">
+    <div slot="controls">
+        <!-- Html controls start-->
+        <label>flush <input type="checkbox" v-model="flush"></label>
+        <label>
+            state
+            <select v-model="state">
+                <option v-for="option in states" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+        </label>
+    </div>
+    <!-- Html controls end-->
+    <div slot="markup">
+        <!-- Html markup start-->
+        <vs-list-group style="width: 350px" :flush="flush">
+            <vs-list-group-item :state="state">
+                Cras justo odio
+                <vs-badge type="pill">14</vs-badge>
+
+            </vs-list-group-item>
+            <vs-list-group-item>
+                Dapibus ac facilisis in
+                <vs-badge type="pill">2</vs-badge>
+
+            </vs-list-group-item>
+            <vs-list-group-item>
+                Morbi leo risus
+                <vs-badge type="pill">1</vs-badge>
+            </vs-list-group-item>
+        </vs-list-group>
+        <!-- Html markup end-->
+    </div>
+</docs-demo>	
