@@ -20,6 +20,7 @@ import buttonRadio from 'src/docs/button-radio'
 import card from 'src/docs/card'
 import collapse from 'src/docs/collapse'
 import dropdown from 'src/docs/dropdown'
+import dropdownSelect from 'src/docs/dropdown-select'
 
 export default {
     pages: [
@@ -34,6 +35,7 @@ export default {
         card,
         collapse,
         dropdown,
+        dropdownSelect,
 
         introduction,
         docsPages,

@@ -1,0 +1,22 @@
+<vs-dropdown-select 
+  :list="[
+    {
+      text: 'First',
+      value: 'first',
+    }, {
+      text: 'Second',
+      value: 'second',
+    }, {
+      text: 'Third',
+      value: 'third',
+    }]"
+  :model.sync="model"
+  size="md"
+  variant="primary"
+  position="left"
+  default-text="Action"
+  :force-default="false"
+  :caret="false"
+  dropup
+  return-object>
+</vs-dropdown-select>
