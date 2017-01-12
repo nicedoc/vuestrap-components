@@ -1,15 +1,14 @@
 <div id="docs-pages">
     <!-- header -->
-    <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-light bg-faded">
-        <!--<div class="container">-->
+    <nav class="navbar navbar-toggleable-sm navbar-fixed-top navbar-light bg-faded">
+        <div class="container">
             <!--<a class="navbar-brand text-center" href="#/">-->
                 <!--<img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo">-->
             <!--</a>-->
-            <a class="navbar-brand text-center hidden-sm-down" href="#/">
+            <a class="navbar-brand text-center hidden-sm-down mr-auto" href="#/">
                 <img v-bind:src="'assets/vuestrap-logo.svg'" alt="Vuestrap logo"> Documentation
             </a>
-            <div class="float-xs-right">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item hidden-sm-down">
                     <a href="#/" class="btn">Introduction</a>
                 </li>
@@ -21,9 +20,7 @@
                        v-on:click.stop.prevent="$root.$vuestrap.$emit('toggle::offcanvas-drawer', 'main')">&#9776;</a>
                 </li>
             </ul>
-            </div>
-
-        <!--</div>&lt;!&ndash; /.container &ndash;&gt;-->
+        </div><!-- /.container -->
     </nav><!-- /.navbar -->
 
     <!-- content -->
