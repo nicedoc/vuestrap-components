@@ -1,0 +1,17 @@
+<fieldset :class="['form-group', inputState]">
+    <div class="form-check" v-for="item in list"
+         v-bind:class="{ 'form-check-inline': !vertical, disabled: item.disabled }">
+        <label class="form-check-label" v-bind:class="{ 'c-input': custom, 'c-radio': custom }">
+            <input
+                    :id="item.id"
+                    class="form-check-input"
+                    type="radio"
+                    :name="name"
+                    :value="item.value"
+                    autocomplete="off"
+                    v-model="selection"
+                    :disabled="item.disabled">
+            <span class="c-indicator" v-if="custom"></span> {{item.name}}
+        </label>
+    </div>
+</fieldset>

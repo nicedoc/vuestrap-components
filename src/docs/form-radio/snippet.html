@@ -1,0 +1,19 @@
+<vs-form-radio 
+  :model.sync="model"
+  :list="[
+    {
+      name: 'First',
+      value: 'first',
+    }, {
+      name: 'Second',
+      value: 'second',
+    }, {
+      name: 'Third (disabled)',
+      value: 'third',
+      disabled: true,
+    }]"
+  :state="'success'"
+  :custom="false"
+  vertical
+  return-object>
+</vs-form-radio>

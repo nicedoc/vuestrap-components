@@ -1,0 +1,34 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="controls">
+		<!-- Html controls start-->
+		<label>size
+			<select v-model="size">
+				<option v-for="option in sizes" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<label>state
+			<select v-model="state">
+				<option v-for="option in states" v-bind:value="option.value">
+			    {{ option.text }}
+			  </option>
+			</select>
+		</label>
+		<!-- Html controls end-->
+	</div>
+	<div slot="markup">
+			<!-- Html markup start-->
+			<vs-form-select
+		    :model.sync="model"
+		    :options="options"
+		    :default-option="{text: 'Please select one',value: 'default'}"
+		    type="text"
+		    label="Example Label"
+		    description="We'll never share your gender with anyone else."
+		    :size="size"
+		    :state="state">
+			</vs-form-select>
+			<!-- Html markup end-->
+	</div>
+</docs-demo>	

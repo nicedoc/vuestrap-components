@@ -4,7 +4,7 @@
  */
 
 // pulled from http://stackoverflow.com/questions/1349404/generate-a-string-of-5-random-characters-in-javascript
-export function makeid() {
+export function uniqueId() {
   let text = ''
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
