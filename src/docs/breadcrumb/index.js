@@ -2,11 +2,11 @@ import meta from './breadcrumb.json'
 import template from './breadcrumb.html'
 import snippet from './snippet.html'
 import vsBreadcrumb from 'src/components/breadcrumb'
-import docsDemo from 'vuestrap-docs/src/components/demo'
+import docsDemo from 'src/components/vuestrap/demo'
 
 export default {
   route: {
-    url: '/breadcrumb',
+    path: '/breadcrumb',
     name: 'breadcrumb',
     title: 'Breadcrumb',
   },
@@ -15,7 +15,7 @@ export default {
     return {
       meta: meta,
       snippet: snippet,
-      list: [{text: 'Home', link: '#', active: true}, {text: 'Library', active: false}],
+      list: [{text: 'Home', link: '/', active: true}, {text: 'Breadcrumb', link: "/breadcrumb", active: true}, {text: 'Demo', active: false}],
     }
   },
   components: {

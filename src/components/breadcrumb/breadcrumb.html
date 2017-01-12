@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
-    <li v-for="item in list" v-bind:class="{ active: item.active }">
-        <a href="#" v-on:click.stop.prevent="changeLocation($router, item.link)" v-if="item.active">{{item.text}}</a>
+    <li v-for="item in list" class="breadcrumb-item " v-bind:class="{ active: item.active }">
+        <router-link :to="item.link" v-if="item.active">{{item.text}}</router-link>
         <span v-if="!item.active">{{item.text}}</span>
     </li>
 </ol>

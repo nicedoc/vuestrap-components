@@ -1,7 +1,7 @@
 // import normalize, grid, utilities and
 import 'vuestrap/core'
 // impoprt styling required for docs
-import 'vuestrap/components/alert'
+import 'vuestrap/components'
 
 // import modules and pages
 import introduction from './introduction'
@@ -12,6 +12,7 @@ import search from './search'
 import accordion from './accordion'
 import alert from './alert'
 import badge from './badge'
+import breadcrumb from './breadcrumb'
 import collapse from './collapse'
 
 export default {
@@ -19,6 +20,7 @@ export default {
         accordion,
         alert,
         badge,
+        breadcrumb,
         collapse,
 
         introduction,
