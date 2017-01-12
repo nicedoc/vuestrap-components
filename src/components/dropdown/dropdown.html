@@ -1,0 +1,16 @@
+<div class="dropdown" v-bind:class="{ 'show': show, dropdown: !dropup, dropup: dropup, 'dropdown-arrow': arrow}" v-on:click="toggle($event)">
+    <span class="btn-action">
+        <button
+            id="dLabel"
+            :class="['btn', dropdownToggle, btnVariant, btnSize]"
+            :aria-haspopup="true"
+            :aria-expanded="show"
+            :disabled="disabled"
+            v-if="text">
+            <span v-html="text"></span>
+            <span class="caret"></span>
+        </button>
+        <slot name="button" v-if="!text"></slot>
+    </span>
+    <slot></slot>
+</div>

@@ -57,7 +57,7 @@ module.exports = {
                 use: [
                     {loader: 'style-loader'},
                     {loader: 'css-loader'},
-                    {loader: 'postcss-loader'},
+                    // {loader: 'postcss-loader'},
                     {loader: 'sass-loader'},
                     {
                         loader: 'vuestrap-loader',

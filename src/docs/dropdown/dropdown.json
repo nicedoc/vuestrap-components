@@ -1,0 +1,59 @@
+{
+	"name": "dropdown",
+	"title": "Dropdown",
+	"description": "Dropdowns are toggleable, contextual overlays for displaying lists of links.",
+	"dependencies": ["vuestrap/buttons"],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "arrow",
+			"type": "Boolean",
+			"default": "true",
+			"required": false,
+			"description": "Show/hide down menu with arrow.."
+		},
+		{
+			"name": "caret",
+			"type": "Boolean",
+			"default": "true",
+			"required": false,
+			"description": "Show/hide down caret.."
+		},
+		{
+			"name": "text",
+			"type": "String",
+			"default": "",
+			"required": false,
+			"description": "Button text.."
+		},
+		{
+			"name": "size",
+			"type": "String",
+			"values": ["sm","md","lg"],
+			"default": "md",
+			"description": "Size of the button.."
+		}, 
+		{
+			"name": "variant",
+			"type": "String",
+			"values": ["secondary","primary","success","info","warning","danger","link"],
+			"default": "success",
+			"description": "Button color context."
+		},
+		{
+			"name": "dropup",
+			"type": "Boolean",
+			"default": "false",
+			"description": "Allow for dropdowns to go bottom up (aka, dropup-menu)"
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": "false",
+			"description": "Make button look inactive by adding the disabled boolean attribute."
+		}
+	]
+}

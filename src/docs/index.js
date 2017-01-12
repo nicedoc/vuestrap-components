@@ -17,7 +17,9 @@ import buttons from 'src/docs/buttons'
 import buttonGroup from 'src/docs/button-group'
 import buttonCheckbox from 'src/docs/button-checkbox'
 import buttonRadio from 'src/docs/button-radio'
+import card from 'src/docs/card'
 import collapse from 'src/docs/collapse'
+import dropdown from 'src/docs/dropdown'
 
 export default {
     pages: [
@@ -29,7 +31,9 @@ export default {
         buttonCheckbox,
         buttonRadio,
         buttonGroup,
+        card,
         collapse,
+        dropdown,
 
         introduction,
         docsPages,
