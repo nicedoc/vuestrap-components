@@ -51,6 +51,7 @@ import formSelect from 'src/docs/form-select'
 import formTextarea from 'src/docs/form-textarea'
 import images from 'src/docs/images'
 import listGroup from 'src/docs/list-group'
+import modal from 'src/docs/modal'
 
 
 export default {
@@ -74,6 +75,7 @@ export default {
         formTextarea,
         images,
         listGroup,
+        modal,
 
         introduction,
         docsPages,
