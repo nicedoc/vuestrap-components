@@ -52,7 +52,9 @@ import formTextarea from 'src/docs/form-textarea'
 import images from 'src/docs/images'
 import listGroup from 'src/docs/list-group'
 import modal from 'src/docs/modal'
-
+import nav from 'src/docs/nav'
+import navbar from 'src/docs/navbar'
+import pagination from 'src/docs/pagination'
 
 export default {
     pages: [
@@ -76,6 +78,10 @@ export default {
         images,
         listGroup,
         modal,
+        nav,
+        navbar,
+        pagination,
+
 
         introduction,
         docsPages,
