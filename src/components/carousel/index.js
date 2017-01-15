@@ -19,7 +19,6 @@
 import template from './carousel.html'
 import {csstransitions} from '../../utils/helpers.js'
 
-
 // this is directly linked to the bootstrap animation timing in _carousel.scss
 // for browsers that do not support transitions like IE9 just change slide immediately
 const TRANSITION_DURATION = csstransitions() ? 600 : 0
@@ -27,132 +26,130 @@ const TRANSITION_DURATION = csstransitions() ? 600 : 0
 // when next is set, we want to move from right to left
 // when previous is set, we want to move from left to right
 const DIRECTION = {
-  rtl: {
-    outgoing: 'left',
-    incoming: 'right',
-    overlay: 'next',
-  },
-  ltr: {
-    outgoing: 'right',
-    incoming: 'left',
-    overlay: 'prev',
-  }
+    rtl: {
+        outgoing: 'left',
+        incoming: 'right',
+        overlay: 'next',
+    },
+    ltr: {
+        outgoing: 'right',
+        incoming: 'left',
+        overlay: 'prev',
+    }
 }
 
 // export carosuel object
 export const carousel = {
-  template: template,
-  replace: true,
-  computed: {
+    template: template,
+    replace: true,
+    computed: {},
+    data() {
+        return {
+            index: 0,
+            slidesCount: 0,
+            animating: false,
+            slides: [],
+            direction: DIRECTION.rtl,
+        }
+    },
+    props: {
+        interval: {
+            type: Number,
+            default: 5000
+        },
+        indicators: {
+            type: Boolean,
+            default: true
+        },
+        controls: {
+            type: Boolean,
+            default: true
+        },
+    },
+    methods: {
+        // previous slide
+        prev() {
+            if (this.animating) return
+            this.index--
+            if (this.index < 0) {
+                this.index = this.slidesCount
+            }
+        },
+        // next slide
+        next() {
+            if (this.animating) return
+            this.index++
+            if (this.index > this.slidesCount) {
+                this.index = 0
+            }
+        },
+        // on slide change
+        changeSlide(index) {
+            this.index = index
+        },
+        // pause auto rotation
+        pause() {
+            if (this.interval === 0 || typeof this.interval === 'undefined') return
+            clearInterval(this._intervalId)
+        },
+        // start auto rotate slides
+        start() {
+            if (this.interval === 0 || typeof this.interval === 'undefined') return
+            this._intervalId = setInterval(() => {
+                this.next()
+            }, this.interval)
+        }
+    },
+    mounted() {
+        // get all slides
+        this._items = this.$el.querySelectorAll('.carousel-item')
+        this.slidesCount = this._items.length - 1
+        this.slides = Array.apply(null, {length: this._items.length}).map(Number.call, Number)
 
-  },
-  data() {
-    return {
-      index: 0,
-      slidesCount: 0,
-      animating: false,
-      slides: [],
-      direction: DIRECTION.rtl,
+        // set first slide as active
+        this._items[0].classList.add('active')
+
+        // auto rotate slides
+        this.start()
+    },
+    watch: {
+        index(val, oldVal) {
+            this.animating = true
+            this.direction = DIRECTION.rtl
+
+            // when previous is pressed we want to move from left to right
+            if (val < oldVal) {
+                this.direction = DIRECTION.ltr
+            }
+
+            // lets animate
+            // prepare next slide to animate (position it on the opposite side of the direction as a starting point)
+            this._items[val].classList.add(this.direction.incoming, this.direction.overlay)
+            // reflow
+            this._items[val].offsetWidth
+            // add class active
+            this._items[val].classList.add('active')
+            // trigger animation on outgoing and incoming slide
+            this._items[oldVal].classList.add(this.direction.outgoing)
+            this._items[val].classList.remove(this.direction.incoming)
+            // wait for animation to finish and cleanup classes
+            this._carouselAnimation = setTimeout(() => {
+                this._items[oldVal].classList.remove(this.direction.outgoing, 'active')
+                this._items[val].classList.remove(this.direction.overlay)
+                this.animating = false
+                // trigger an event
+                this.$vuestrap.$emit('slid::carousel::vuestrap', val)
+            }, TRANSITION_DURATION)
+        }
+    },
+    destroyed() {
+        clearTimeout(this._carouselAnimation)
+        clearInterval(this._intervalId)
     }
-  },
-  props: {
-    interval: {
-      type: Number,
-      default: 5000
-    },
-    indicators: {
-      type: Boolean,
-      default: true
-    },
-    controls: {
-      type: Boolean,
-      default: true
-    },
-  },
-  methods: {
-    // previous slide
-    prev() {
-      if (this.animating) return
-      this.index--
-      if (this.index < 0) {
-        this.index = this.slidesCount
-      }
-    },
-    // next slide
-    next() {
-      if (this.animating) return
-      this.index++
-      if (this.index > this.slidesCount) {
-        this.index = 0
-      }
-    },
-    // on slide change
-    changeSlide(index) {
-      this.index = index
-    },
-    // pause auto rotation
-    pause() {
-      if (this.interval === 0 || typeof this.interval === 'undefined') return
-      clearInterval(this._intervalId)
-    },
-    // start auto rotate slides
-    start() {
-      if (this.interval === 0 || typeof this.interval === 'undefined') return
-      this._intervalId = setInterval(() => {
-        this.next()
-      }, this.interval)
-    }
-  },
-  ready() {
-    // get all slides
-    this._items = this.$el.querySelectorAll('.carousel-item')
-    this.slidesCount = this._items.length - 1
-    this.slides = Array.apply(null, {length: this._items.length}).map(Number.call, Number)
-
-    // set first slide as active
-    this._items[0].classList.add('active')
-
-    // auto rotate slides
-    this.start()
-  },
-  watch: {
-    index(val, oldVal) {
-      this.animating = true
-      this.direction = DIRECTION.rtl
-
-      // when previous is pressed we want to move from left to right
-      if (val < oldVal) {
-       this.direction = DIRECTION.ltr
-      }
-
-      // lets animate
-      // prepare next slide to animate (position it on the opposite side of the direction as a starting point)
-      this._items[val].classList.add(this.direction.incoming, this.direction.overlay)
-      // reflow
-      this._items[val].offsetWidth
-      // add class active
-      this._items[val].classList.add('active')
-      // trigger animation on outgoing and incoming slide
-      this._items[oldVal].classList.add(this.direction.outgoing)
-      this._items[val].classList.remove(this.direction.incoming)
-      // wait for animation to finish and cleanup classes
-      this._carouselAnimation = setTimeout(() => {
-        this._items[oldVal].classList.remove(this.direction.outgoing, 'active')
-        this._items[val].classList.remove(this.direction.overlay)
-        this.animating = false
-        // trigger an event
-        this.$dispatch('slid::carousel', val)
-      }, TRANSITION_DURATION)
-    }
-  },
-  destroyed() {
-    clearTimeout(this._carouselAnimation)
-    clearInterval(this._intervalId)
-  }
 }
 
 // export slide object
 export const slide = {
-  template: '<div class="carousel-item"><slot></slot></div>',
-  replace: true,
+    template: '<div class="carousel-item"><slot></slot></div>',
+    replace: true,
 }

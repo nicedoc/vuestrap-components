@@ -42,6 +42,7 @@ import buttonCheckbox from 'src/docs/button-checkbox'
 import buttonRadio from 'src/docs/button-radio'
 import card from 'src/docs/card'
 import collapse from 'src/docs/collapse'
+import carousel from 'src/docs/carousel'
 import dropdown from 'src/docs/dropdown'
 import dropdownSelect from 'src/docs/dropdown-select'
 import formCheckbox from 'src/docs/form-checkbox'
@@ -60,6 +61,7 @@ import progress from 'src/docs/progress'
 import tables from 'src/docs/tables'
 import tabs from 'src/docs/tabs'
 import tooltip from 'src/docs/tooltip'
+import media from 'src/docs/media'
 
 export default {
     pages: [
@@ -72,6 +74,7 @@ export default {
         buttonRadio,
         buttonGroup,
         card,
+        carousel,
         collapse,
         dropdown,
         dropdownSelect,
@@ -82,6 +85,7 @@ export default {
         formTextarea,
         images,
         listGroup,
+        media,
         modal,
         nav,
         navbar,
