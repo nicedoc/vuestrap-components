@@ -55,6 +55,11 @@ import modal from 'src/docs/modal'
 import nav from 'src/docs/nav'
 import navbar from 'src/docs/navbar'
 import pagination from 'src/docs/pagination'
+import popover from 'src/docs/popover'
+import progress from 'src/docs/progress'
+import tables from 'src/docs/tables'
+import tabs from 'src/docs/tabs'
+import tooltip from 'src/docs/tooltip'
 
 export default {
     pages: [
@@ -81,7 +86,11 @@ export default {
         nav,
         navbar,
         pagination,
-
+        popover,
+        progress,
+        tables,
+        tooltip,
+        tabs,
 
         introduction,
         docsPages,

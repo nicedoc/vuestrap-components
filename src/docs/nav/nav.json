@@ -1,0 +1,47 @@
+{
+	"name": "nav",
+	"title": "Nav",
+	"description": "Roll your own navigation style by extending the base .nav component.",
+	"dependencies": [],
+	"category": "components",
+	"browserSupport": {
+		"browsers": ["IE9+", "Android 4.3"]
+	},
+	"options": [
+		{
+			"name": "type",
+			"type": "String",
+			"values": ["default", "pills", "navbar"],
+			"default": "default",
+			"description": "Type of the navigation. Use <code>navbar</code> type in conjuction with <code>&lt;vs-navbar></code> element."
+		},
+		{
+			"name": "vertical",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "Stack items in vertical position."
+		},
+		{
+			"name": "active",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "An active state on the individual <code>&lt;vs-nav-item></code>."
+		},
+		{
+			"name": "disabled",
+			"type": "Boolean",
+			"default": "false",
+			"required": false,
+			"description": "A disabled state on the individual <code>&lt;vs-nav-item></code>."
+		},
+		{
+			"name": "link",
+			"type": "String",
+			"default": "false",
+			"required": false,
+			"description": "Nav items support vue-router style links or regular href values."
+		}
+	]
+}

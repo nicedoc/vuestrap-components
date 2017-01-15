@@ -1,0 +1,13 @@
+<div>
+<span class="popover-trigger" ref="trigger">
+	<slot></slot>
+</span>
+    <div :class="['popover', popoverAlignment]" ref="popover">
+        <div class="popover-arrow"></div>
+        <h3 class="popover-title" v-if="title">{{title}}</h3>
+        <div class="popover-content">
+            <span v-html="text" v-if="text"></span>
+            <slot name="content" v-if="!text"></slot>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<li class="nav-item">
+    <a href="#" v-on:click.stop.prevent="changeLocation($router, link)"
+                        :class="['nav-link', active ? 'active' : '', disabled ? 'disabled' : '']">
+    <slot></slot>
+</a></li>

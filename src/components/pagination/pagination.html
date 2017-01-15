@@ -1,0 +1,25 @@
+<div class="btn-group pagination" role="group" aria-label="Pagination">
+    <div>{{numberOfPages}}</div>
+
+    <button type="button" :class="['btn btn-secondary', btnSize]" v-bind:disabled="current == 1 "
+            v-on:click.prevent="$vuestrap.$emit('prev::pagination::vuestrap')"><span aria-hidden="true">&laquo;</span>
+    </button>
+    <button type="button" :class="['btn btn-secondary', btnSize, current == 1 ?  'active' : '' ]"
+            v-on:click.prevent="$vuestrap.$emit('goto::pagination::vuestrap', 1)" v-show="showPrev">1
+    </button>
+    <span :class="['btn btn-secondary', btnSize]" v-show="showPrev">...</span>
+    <button type="button"
+            :class="['btn', btnSize, btnVariant(index), index + diff == current ? 'active' : '' ,  index + diff != current ? 'hidden-xs-down' : '']"
+            v-for="index in pageLinks"
+            v-on:click.prevent="$vuestrap.$emit('goto::pagination::vuestrap', index + diff)">{{index + diff}}
+    </button>
+    <span :class="['btn btn-secondary', btnSize]" v-show="showNext">...</span>
+    <button type="button" :class="['btn btn-secondary', btnSize, numberOfPages == current ? 'active' : '' ]"
+            v-show="showNext" v-on:click.prevent="$vuestrap.$emit('goto::pagination::vuestrap', numberOfPages)">
+        {{numberOfPages}}
+    </button>
+    <button type="button" :class="['btn btn-secondary', btnSize]" v-bind:disabled="current == numberOfPages"
+            v-on:click.prevent="$vuestrap.$emit('next::pagination::vuestrap')"><span
+            aria-hidden="true">&raquo;</span>
+    </button>
+</div>

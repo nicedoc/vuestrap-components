@@ -1,0 +1,12 @@
+<progress 
+	:class="['progress', progressVariant, striped ? 'progress-striped' : '', animated ? 'progres-animated' : '']"
+	:value="value"
+	:max="max"
+	:aria-valuenow="value"
+	:aria-valuemin="0"
+	:aria-valuemax="max"
+	ref="progress">
+  <div class="progress">
+    <span class="progress-bar" v-bind:style="{width: value + '%'}" ref="progressbar"></span>
+  </div>
+</progress>

@@ -1,0 +1,17 @@
+<docs-demo :meta="meta" :snippet="snippet">
+	<div slot="markup">
+				<vs-tooltip text="tooltip top" position="top">
+					<button class="btn">tooltip top</button>
+				</vs-tooltip>
+				<vs-tooltip text="tooltip bottom" position="bottom">
+					<button class="btn">tooltip bottom</button>
+				</vs-tooltip>
+				<vs-tooltip text="tooltip left" position="left">
+					<button class="btn">tooltip left</button>
+				</vs-tooltip>
+				<vs-tooltip position="right">
+					<button class="btn">tooltip right (html)</button>
+					<em slot="content">tooltip right (italic)</em>
+				</vs-tooltip>
+	</div>
+</docs-demo>	
