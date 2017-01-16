@@ -13,7 +13,6 @@ export default {
   },
   props: {
     model: {
-      twoWay: true,
       required: true
     },
     id: {

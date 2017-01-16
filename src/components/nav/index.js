@@ -1,5 +1,4 @@
 // import dependencies
-import './_nav-override.scss'
 import template from './nav.html'
 import templateItem from './nav-item.html'
 import {changeLocation} from '../../utils/helpers.js'

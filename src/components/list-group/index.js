@@ -1,6 +1,5 @@
 // import dependencies
 import template from './list-group.html'
-import './list-group-override.scss'
 
 // export component object
 export const listGroup = {

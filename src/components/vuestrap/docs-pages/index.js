@@ -31,27 +31,10 @@ export default {
     components: {
         docsSearch,
     },
-    methods: {
-        changeRoute(route) {
-            window.scrollTo(0, 0)
-            this.$set('currentView', route.id)
-            this.$set('pageTitle', route.pageTitle)
-        }
-    },
-    ready() {
-        // set routes for each page
-        // this.routes.forEach((route) => {
-        //     // Adhoc Routing
-        //     router.on(route.url, () => {
-        //         if (route.redirect) {
-        //             // if route has redirect param, redirect to the spcified route
-        //             router.setRoute(route.redirect)
-        //         }
-        //         this.changeRoute(route)
-        //     })
-        // })
-        //
-        // // init router
-        // router.init('/')
+    created() {
+        this.$router.afterEach(route => {
+            document.title = route.meta.title;
+            window.scrollTo(0, 0);
+        })
     }
 }

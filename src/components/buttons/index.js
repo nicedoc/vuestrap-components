@@ -1,5 +1,4 @@
 import template from './buttons.html'
-import './buttons-override.scss'
 import {changeLocation} from '../../utils/helpers.js'
 
 // export component object

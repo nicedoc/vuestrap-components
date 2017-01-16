@@ -21,7 +21,6 @@ export default {
         },
         model: {
             type: Array,
-            twoWay: true,
             default: [],
         },
         size: {

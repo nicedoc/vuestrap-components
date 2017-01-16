@@ -1,6 +1,5 @@
 // import dependencies
 import template from './dropdown.html'
-import './dropdown-override.scss'
 
 // export component object
 export default {

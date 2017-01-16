@@ -17,6 +17,7 @@ export default {
         return {
             meta: meta,
             snippet: snippet,
+            controls: false
         }
     },
     components: {

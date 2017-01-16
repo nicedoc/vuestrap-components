@@ -6,9 +6,9 @@ import template from './form-checkbox.html'
 export default {
     template: template,
     replace: true,
-    data: function() {
+    data: function () {
         return {
-            selection : this.model
+            selection: this.model
         }
     },
     computed: {
@@ -19,13 +19,11 @@ export default {
     props: {
         list: {
             type: Array,
-            twoWay: true,
             default: [],
             required: true
         },
         model: {
             type: Array,
-            twoWay: true,
             default: []
         },
         custom: {
@@ -64,7 +62,7 @@ export default {
             deep: true,
         }
     },
-    created : function() {
+    created: function () {
         // handle initial selection
         this.list.forEach((item) => {
             if (this.returnObject) {

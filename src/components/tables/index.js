@@ -49,7 +49,7 @@ export default {
     },
     methods: {},
     events: {},
-    ready() {
+    mounted() {
         this._table = this.$el.querySelectorAll('table')[0]
         this._theads = this._table.querySelectorAll('thead')
 
