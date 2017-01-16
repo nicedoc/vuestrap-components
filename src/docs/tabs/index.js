@@ -6,24 +6,26 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {sizes} from 'src/utils'
 
 export default {
-  route: {
-    path: '/tabs',
-    name: 'tabs',
-    title: 'Tabs',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      fade: true,
-      size: 'md',
-      sizes: sizes,
-    }
-  },
-  components: {
-    vsTab,
-    vsTabs,
-    docsDemo,
-  },
+    route: {
+        path: '/tabs',
+        name: 'tabs',
+        meta: {
+            title: 'Tabs',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            fade: true,
+            size: 'md',
+            sizes: sizes,
+        }
+    },
+    components: {
+        vsTab,
+        vsTabs,
+        docsDemo,
+    },
 }

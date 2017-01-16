@@ -6,23 +6,25 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/carousel',
-    name: 'carousel',
-    title: 'Carousel',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      controls: true,
-      indicators: true,
-    }
-  },
-  components: {
-    vsSlide,
-    vsCarousel,
-    docsDemo,
-  },
+    route: {
+        path: '/carousel',
+        name: 'carousel',
+        meta: {
+            title: 'Carousel',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            controls: true,
+            indicators: true,
+        }
+    },
+    components: {
+        vsSlide,
+        vsCarousel,
+        docsDemo,
+    },
 }

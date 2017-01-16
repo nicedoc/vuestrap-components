@@ -6,25 +6,27 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {sizes, variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/buttons',
-    name: 'buttons',
-    title: 'Buttons',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      size: 'md',
-      sizes: sizes,
-      variant: 'primary',
-      variants: variants,
-    }
-  },
-  components: {
-    vsBtn,
-    docsDemo,
-  },
+    route: {
+        path: '/buttons',
+        name: 'buttons',
+        meta: {
+            title: 'Buttons',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            size: 'md',
+            sizes: sizes,
+            variant: 'primary',
+            variants: variants,
+        }
+    },
+    components: {
+        vsBtn,
+        docsDemo,
+    },
 }
 

@@ -5,21 +5,23 @@ import {collapse as vsCollapse, collapseToggle as vsCollapseToggle} from 'src/co
 import docsDemo from 'src/components/vuestrap/demo'
 
 export default {
-  route: {
-    path: '/collapse',
-    name: 'collapse',
-    title: 'Collapse',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-    }
-  },
-  components: {
-    vsCollapse,
-    vsCollapseToggle,
-    docsDemo,
-  },
+    route: {
+        path: '/collapse',
+        name: 'collapse',
+        meta: {
+            title: 'Collapse',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+        }
+    },
+    components: {
+        vsCollapse,
+        vsCollapseToggle,
+        docsDemo,
+    },
 }

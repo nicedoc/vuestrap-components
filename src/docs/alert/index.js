@@ -8,7 +8,9 @@ export default {
     route: {
         path: '/alert',
         name: 'alert',
-        title: 'Alert',
+        meta: {
+            title: 'Alert'
+        }
     },
     template: template,
     data() {

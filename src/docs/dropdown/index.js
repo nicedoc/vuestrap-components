@@ -6,27 +6,29 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {sizes, variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/dropdown',
-    name: 'dropdown',
-    title: 'Dropdown',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      arrow: true,
-      caret: true,
-      dropup: false,
-      size: 'md',
-      sizes: sizes,
-      variant: 'primary',
-      variants: variants,
-    }
-  },
-  components: {
-    vsDropdown,
-    docsDemo,
-  },
+    route: {
+        path: '/dropdown',
+        name: 'dropdown',
+        meta: {
+            title: 'Dropdown',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            arrow: true,
+            caret: true,
+            dropup: false,
+            size: 'md',
+            sizes: sizes,
+            variant: 'primary',
+            variants: variants,
+        }
+    },
+    components: {
+        vsDropdown,
+        docsDemo,
+    },
 }

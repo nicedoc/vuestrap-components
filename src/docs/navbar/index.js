@@ -10,7 +10,9 @@ export default {
     route: {
         path: '/navbar',
         name: 'navbar',
-        title: 'Navbar',
+        meta: {
+            title: 'Navbar',
+        }
     },
     template: template,
     data() {

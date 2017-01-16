@@ -6,39 +6,41 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {sizes, variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/button-radio',
-    name: 'button-radio',
-    title: 'Button Radio',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      model: {
-          text: 'Second',
-          value: 'second',
-      },
-      list: [{
-          text: 'First',
-          value: 'first',
-        }, {
-          text: 'Second',
-          value: 'second',
-        }, {
-          text: 'Third',
-          value: 'third',
-        },
-      ],
-      size: 'md',
-      sizes: sizes,
-      variant: 'primary',
-      variants: variants,
-    }
-  },
-  components: {
-    vsButtonRadio,
-    docsDemo,
-  },
+    route: {
+        path: '/button-radio',
+        name: 'button-radio',
+        meta: {
+            title: 'Button Radio',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            model: {
+                text: 'Second',
+                value: 'second',
+            },
+            list: [{
+                text: 'First',
+                value: 'first',
+            }, {
+                text: 'Second',
+                value: 'second',
+            }, {
+                text: 'Third',
+                value: 'third',
+            },
+            ],
+            size: 'md',
+            sizes: sizes,
+            variant: 'primary',
+            variants: variants,
+        }
+    },
+    components: {
+        vsButtonRadio,
+        docsDemo,
+    },
 }

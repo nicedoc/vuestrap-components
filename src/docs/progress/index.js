@@ -6,25 +6,27 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/progress',
-    name: 'progress',
-    title: 'Progress',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      value: 25,
-      animated: true,
-      striped: true,
-      variant: 'primary',
-      variants: variants,
-    }
-  },
-  components: {
-    vsProgress,
-    docsDemo,
-  },
+    route: {
+        path: '/progress',
+        name: 'progress',
+        meta: {
+            title: 'Progress',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            value: 25,
+            animated: true,
+            striped: true,
+            variant: 'primary',
+            variants: variants,
+        }
+    },
+    components: {
+        vsProgress,
+        docsDemo,
+    },
 }

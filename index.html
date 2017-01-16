@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>vuestrap-components</title>
+    <title v-text="pageTitle">Vuestrap Components</title>
 </head>
 <body>
 <div id="app" v-cloak>
@@ -17,7 +17,7 @@
         </vs-offcanvas-drawer>
 
         <!-- desktop content -->
-        <vs-docs-pages :routes="routes" :page-title.sync="pageTitle" :pkg="pkg"></vs-docs-pages>
+        <vs-docs-pages :routes="routes" :page-title="pageTitle" :pkg="pkg"></vs-docs-pages>
 
 
     </vs-offcanvas-wrapper>

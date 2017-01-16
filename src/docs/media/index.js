@@ -5,29 +5,31 @@ import vsMedia from 'src/components/media'
 import docsDemo from 'src/components/vuestrap/demo'
 
 export default {
-  route: {
-    path: '/media',
-    name: 'media',
-    title: 'Media',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      position: 'top left',
-      positions: [
-        {text: 'top left', value: 'top left'},
-        {text: 'top right', value: 'top right'},
-        {text: 'middle left', value: 'middle left'},
-        {text: 'middle right', value: 'middle right'},
-        {text: 'bottom left', value: 'bottom left'},
-        {text: 'bottom right', value: 'bottom right'},
-      ],
-    }
-  },
-  components: {
-    vsMedia,
-    docsDemo,
-  },
+    route: {
+        path: '/media',
+        name: 'media',
+        meta: {
+            title: 'Media',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            position: 'top left',
+            positions: [
+                {text: 'top left', value: 'top left'},
+                {text: 'top right', value: 'top right'},
+                {text: 'middle left', value: 'middle left'},
+                {text: 'middle right', value: 'middle right'},
+                {text: 'bottom left', value: 'bottom left'},
+                {text: 'bottom right', value: 'bottom right'},
+            ],
+        }
+    },
+    components: {
+        vsMedia,
+        docsDemo,
+    },
 }

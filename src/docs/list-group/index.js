@@ -7,27 +7,29 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {states} from 'src/utils'
 
 export default {
-  route: {
-    path: '/list-group',
-    name: 'list-group',
-    title: 'List group',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      state: 'success',
-      flush: false,
-      states: states.concat([{text: 'info', value: 'info'}]),
-      type: 'default',
-      types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
-    }
-  },
-  components: {
-    vsListGroup,
-    vsListGroupItem,
-    vsBadge,
-    docsDemo,
-  },
+    route: {
+        path: '/list-group',
+        name: 'list-group',
+        meta: {
+            title: 'List group',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            state: 'success',
+            flush: false,
+            states: states.concat([{text: 'info', value: 'info'}]),
+            type: 'default',
+            types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
+        }
+    },
+    components: {
+        vsListGroup,
+        vsListGroupItem,
+        vsBadge,
+        docsDemo,
+    },
 }

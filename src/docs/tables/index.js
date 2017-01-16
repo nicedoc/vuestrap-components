@@ -8,7 +8,9 @@ export default {
     route: {
         path: '/tables',
         name: 'tables',
-        title: 'Tables',
+        meta: {
+            title: 'Tables',
+        }
     },
     template: template,
     data() {

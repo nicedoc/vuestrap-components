@@ -22,6 +22,10 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     routes // （缩写）相当于 routes: routes
+});
+
+router.afterEach(route => {
+    document.title = route.meta.title;
 })
 
 Vue.prototype.$vuestrap = new Vue();

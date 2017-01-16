@@ -6,24 +6,26 @@ import docsDemo from 'src/components/vuestrap/demo'
 import {variants} from 'src/utils'
 
 export default {
-  route: {
-    path: '/badge',
-    name: 'badge',
-    title: 'Badge',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-      variant: 'primary',
-      variants: variants,
-      type: 'default',
-      types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
-    }
-  },
-  components: {
-    vsBadge,
-    docsDemo,
-  },
+    route: {
+        path: '/badge',
+        name: 'badge',
+        meta: {
+            title: 'Badge'
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            variant: 'primary',
+            variants: variants,
+            type: 'default',
+            types: [{text: 'default', value: 'default'}, {text: 'pill', value: 'pill'}],
+        }
+    },
+    components: {
+        vsBadge,
+        docsDemo,
+    },
 }

@@ -7,7 +7,9 @@ export default {
     route: {
         path: '/docs-pages',
         name: 'docs-pages',
-        title: 'Docs Pages'
+        meta: {
+            title: 'Docs Pages'
+        }
     },
     template: template,
     data() {

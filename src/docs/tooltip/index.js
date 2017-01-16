@@ -5,20 +5,22 @@ import vsTooltip from 'src/components/tooltip'
 import docsDemo from 'src/components/vuestrap/demo'
 
 export default {
-  route: {
-    path: '/tooltip',
-    name: 'tooltip',
-    title: 'Tooltip',
-  },
-  template: template,
-  data() {
-    return {
-      meta: meta,
-      snippet: snippet,
-    }
-  },
-  components: {
-    vsTooltip,
-    docsDemo,
-  },
+    route: {
+        path: '/tooltip',
+        name: 'tooltip',
+        meta: {
+            title: 'Tooltip',
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+        }
+    },
+    components: {
+        vsTooltip,
+        docsDemo,
+    },
 }

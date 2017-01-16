@@ -10,7 +10,9 @@ export default {
     route: {
         path: '/modal',
         name: 'modal',
-        title: 'Modal',
+        meta: {
+            title: 'Modal',
+        }
     },
     template: template,
     data() {
@@ -31,7 +33,7 @@ export default {
     created() {
         let self = this;
 
-        this.$vuestrap.$on("clicked::button", function(id){
+        this.$vuestrap.$on("clicked::button", function (id) {
             this.$vuestrap.$emit("show::modal", 'modal1')
         })
     }

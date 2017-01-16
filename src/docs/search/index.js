@@ -6,24 +6,26 @@ import demo from 'src/components/vuestrap/demo'
 import search from 'src/components/vuestrap/search'
 
 export default {
-	route: {
+    route: {
         path: '/search',
-		name: 'search',
-		title: 'Search'
-	},
-	template: template,
-	data() {
-		return {
-			meta: meta,
-		  snippet: snippet,
-		  list: [
-              {id: 'component-a', name: 'component-a', path: '.', title: 'Component A'},
-              {id: 'component-b', name: 'component-a', path: '.', title: 'Component B'},
-              {id: 'other', name: 'component-a', path: '.', title: 'Other'}],
-		}
-	},
-	components: {
-		search: search,
-		demo: demo,
-	},
+        name: 'search',
+        meta: {
+            title: 'Search'
+        }
+    },
+    template: template,
+    data() {
+        return {
+            meta: meta,
+            snippet: snippet,
+            list: [
+                {id: 'component-a', name: 'component-a', path: '.', title: 'Component A'},
+                {id: 'component-b', name: 'component-a', path: '.', title: 'Component B'},
+                {id: 'other', name: 'component-a', path: '.', title: 'Other'}],
+        }
+    },
+    components: {
+        search: search,
+        demo: demo,
+    },
 }

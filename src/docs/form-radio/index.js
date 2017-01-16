@@ -9,7 +9,9 @@ export default {
     route: {
         path: '/form-radio',
         name: 'form-radio',
-        title: 'Form radio',
+        meta: {
+            title: 'Form radio',
+        }
     },
     template: template,
     data() {

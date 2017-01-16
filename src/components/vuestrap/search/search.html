@@ -5,6 +5,6 @@
     </div>
     <!-- components -->
     <router-link :to="item.path" class="list-group-item" v-for="item in list" :exact="true" active-class="active">
-        {{item.title}}
+        {{item.meta.title}}
     </router-link>
 </div>

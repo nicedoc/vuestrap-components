@@ -9,7 +9,9 @@ export default {
     route: {
         path: '/form-textarea',
         name: 'form-textarea',
-        title: 'Form textarea',
+        meta: {
+            title: 'Form textarea',
+        }
     },
     template: template,
     data() {

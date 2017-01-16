@@ -9,7 +9,9 @@ export default {
     route: {
         path: '/button-checkbox',
         name: 'button-checkbox',
-        title: 'Button Checkbox',
+        meta: {
+            title: 'Button Checkbox'
+        }
     },
     template: template,
     data() {
@@ -41,10 +43,10 @@ export default {
         vsButtonCheckbox,
         docsDemo,
     },
-    created: function() {
+    created: function () {
         let self = this;
 
-        this.$vuestrap.$on('changed::button-checkbox', function(model){
+        this.$vuestrap.$on('changed::button-checkbox', function (model) {
             self.model = model
         })
     }
