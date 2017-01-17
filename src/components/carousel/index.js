@@ -27,14 +27,14 @@ const TRANSITION_DURATION = csstransitions() ? 600 : 0
 // when previous is set, we want to move from left to right
 const DIRECTION = {
     rtl: {
-        outgoing: 'left',
-        incoming: 'right',
-        overlay: 'next',
+        outgoing: 'carousel-item-left',
+        incoming: 'carousel-item-right',
+        overlay: 'carousel-item-next',
     },
     ltr: {
-        outgoing: 'right',
-        incoming: 'left',
-        overlay: 'prev',
+        outgoing: 'carousel-item-right',
+        incoming: 'carousel-item-left',
+        overlay: 'carousel-item-prev',
     }
 }
 
