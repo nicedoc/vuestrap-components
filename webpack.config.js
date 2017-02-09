@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
@@ -63,7 +63,7 @@ module.exports = {
                         loader: 'vuestrap-loader',
                         options: {
                             themes: [
-                                './src/theme/docs.scss',
+                                './theme/docs.scss',
                                 './modules/vuestrap/theme/_bootstrap.scss',
                             ]
                         }
@@ -76,10 +76,10 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js'
         },
-        modules: [__dirname, 'modules', 'node_modules']
+        modules: ['modules', 'node_modules']
     },
     resolveLoader: {
-        modules: [__dirname, 'modules', 'node_modules']
+        modules: ['modules', 'node_modules']
     },
     devServer: {
         historyApiFallback: true,
