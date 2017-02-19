@@ -9,7 +9,7 @@
  * - 'next' and 'prev' class makes the incoming slide positioned absolute, so it can follow outgoing slide
  *
  * To slide right to left we have to:
- * - add class 'active', 'next', and right to the next slide
+ * - add class 'active', 'next', and 'right' to the next slide
  * - add class 'left' on the current slide same time as remove the 'right' class on the incoming one
  * - remove all classes and only leave 'active' on the incoming slide
  *

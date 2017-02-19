@@ -4,7 +4,7 @@
         <input type="text" class="form-control" placeholder="Search..." v-model="search" autocomplete="on">
     </div>
     <!-- components -->
-    <router-link :to="item.path" class="list-group-item" v-for="item in list" :exact="true" active-class="active">
+    <router-link :to="item.path" class="list-group-item" v-for="item in filteredList" :exact="true" active-class="active">
         {{item.meta.title}}
     </router-link>
 </div>

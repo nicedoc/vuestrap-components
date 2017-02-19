@@ -22,6 +22,14 @@ export default {
             return filtered
         }
     },
+    computed: {
+        filteredList: function () {
+            var self = this;
+            return self.list.filter(function (item) {
+                return item.meta.title.indexOf(self.search) !== -1 && item.name !== 'introduction'
+            })
+        }
+    },
     props: {
         showSearch: {
             type: Number,
