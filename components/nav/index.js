@@ -1,6 +1,7 @@
 // import dependencies
 import template from './nav.html'
 import templateItem from './nav-item.html'
+import "./_nav.scss"
 import {changeLocation} from '../../utils/helpers.js'
 
 // export component object
@@ -38,6 +39,9 @@ export const navItem = {
         },
     },
     methods: {
-        changeLocation: changeLocation
+        go: function(link) {
+            this.$router.push(link);
+            this.$vuestrap.$emit('push::link', link);
+        }
     },
 }
