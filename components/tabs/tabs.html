@@ -1,7 +1,8 @@
 <div class="tabs">
   <ul class="nav nav-tabs">
     <li class="nav-item" v-for="(item,index) in items" v-on:click="setActive(index)">
-      <span class="['nav-link btn', btnSize, item.active ? 'active' : '', item.disabled ? 'disabled' : '']">{{item.title}}</span>
+      <!--<a :class="['nav-link', item.active ? 'active' : '', item.disabled ? 'disabled' : '']">{{item.title}}</a>-->
+      <router-link class="nav-link" :to="item.link" >{{item.title}}</router-link>
     </li>
   </ul>
   <div class="tab-content">

@@ -18,7 +18,7 @@ export const nav = {
             default: '',
         },
     },
-}
+};
 
 // export slide object
 export const navItem = {
@@ -44,4 +44,4 @@ export const navItem = {
             this.$vuestrap.$emit('push::link', link);
         }
     },
-}
+};

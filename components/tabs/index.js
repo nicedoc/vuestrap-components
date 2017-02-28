@@ -69,7 +69,7 @@ export const tabs = {
                 // setting animate to true will trigger fade in effect
                 this.items[index].actived = true
                 this.$children[index].animate = true
-                this.$vuestrap.$emit('changed::tab::vuestrap', this.items[index].id)
+                this.$vuestrap.$emit('changed::tab::vuestrap', this.items[index])
             }, this.fade ? TRANSITION_DURATION : 0)
         },
     },
@@ -104,6 +104,10 @@ export const tab = {
             type: String,
             default: ''
         },
+        link: {
+            type: String,
+            default: ''
+        },
         active: {
             type: Boolean,
             default: false
@@ -115,6 +119,6 @@ export const tab = {
     },
     mounted() {
         const items = this.$parent.items
-        items.push({id: this.id, title: this.title, active: this.active, disabled: this.disabled})
+        items.push({id: this.id, title: this.title, link: this.link, active: this.active, disabled: this.disabled})
     },
 }
