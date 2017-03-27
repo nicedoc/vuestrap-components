@@ -86,7 +86,7 @@ export const tabs = {
 
 // export tab object
 export const tab = {
-    template: '<div role="tabpanel" class="tab-pane" v-bind:class="{active: actived, disabled: disabled, fade: fade, show: animate}"><slot></slot></div>',
+    template: '<div role="tabpanel" v-bind:class="{active: actived, disabled: disabled, fade: fade, show: animate}"><slot></slot></div>',
     replace: true,
     data() {
         return {

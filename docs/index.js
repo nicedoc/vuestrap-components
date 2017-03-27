@@ -45,6 +45,7 @@ import collapse from './collapse'
 import carousel from './carousel'
 import dropdown from './dropdown'
 import dropdownSelect from './dropdown-select'
+import flash from './flash'
 import formCheckbox from './form-checkbox'
 import formInput from './form-input'
 import formRadio from './form-radio'
@@ -78,6 +79,7 @@ export default {
         collapse,
         dropdown,
         dropdownSelect,
+        flash,
         formCheckbox,
         formInput,
         formRadio,
