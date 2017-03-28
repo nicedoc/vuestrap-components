@@ -30,6 +30,11 @@ export default {
             ],
         }
     },
+    methods : {
+        flash : function(state, msg, timeout) {
+            this.$vuestrap.$emit('message::flash', state, msg, timeout);
+        }
+    },
     components: {
         vsFlash,
         docsDemo,

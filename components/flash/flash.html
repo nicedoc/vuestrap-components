@@ -1,6 +1,5 @@
-<div class="flash fade show" :class="[alertState,dismissible ? 'alert-dismissible' : '']" role="alert" v-show="show">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close" v-if="dismissible"
-            v-on:click.stop.prevent="dismiss">
+<div class="flash fade show" :class="[alertState, 'alert-dismissible']" role="alert" v-show="show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" v-on:click.stop.prevent="dismiss">
         <span aria-hidden="true">&times;</span>
         <span class="sr-only">Close</span>
     </button>

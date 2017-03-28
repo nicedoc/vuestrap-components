@@ -9,50 +9,6 @@
   @include border-radius($alert-border-radius);
   position: fixed;
   right: 15px;
-  z-index: 1000;
-}
-
-// Headings for larger alerts
-.flash-heading {
-  // Specified to prevent conflicts of changing $headings-color
-  color: inherit;
-}
-
-// Provide class for links that match alerts
-.flash-link {
-  font-weight: $alert-link-font-weight;
-}
-
-
-// Dismissible alerts
-//
-// Expand the right padding and account for the close button's positioning.
-
-.flash-dismissible {
-  // Adjust close link position
-  .close {
-    position: relative;
-    top: -$alert-padding-y;
-    right: -$alert-padding-x;
-    padding: $alert-padding-y $alert-padding-x;
-    color: inherit;
-  }
-}
-
-
-// Alternate styles
-//
-// Generate contextual modifier classes for colorizing the alert.
-
-.flash-success {
-  @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
-}
-.flash-info {
-  @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
-}
-.flash-warning {
-  @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
-}
-.flash-danger {
-  @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+  top:60px;
+  z-index: 2000;
 }

@@ -2,7 +2,6 @@
 
 	<!-- Html controls start-->
 	<div slot="controls">
-		<label>show <input type="checkbox" v-model="show"></label>
 		<label>dismissible <input type="checkbox" v-model="dismissible"></label>
 		<label>state
 			<select v-model="state">
@@ -23,8 +22,8 @@
 		    :dismissible="dismissible">
 		    This is an alert
 		</vs-flash>
-		<template v-if="!show">
-			<button href='#' v-on:click="show = true">Show flash again</button>
+		<template>
+			<button href='#' v-on:click="flash(state, 'this is a info', 5000)">Show flash again</button>
 		</template>
 	</div>
 	<!-- Html markup end-->
